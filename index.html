@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Моя візитка</title>
+<title>Document</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,6 @@ body{
     box-shadow:0 25px 60px rgba(0,0,0,.4);
 }
 
-
 p{
     margin:20px 0;
     color:#d4d4d8;
@@ -61,15 +60,28 @@ p{
     border-radius:14px;
     font-weight:600;
     transition:.25s;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
 }
 
 .btn:hover{
     transform:translateY(-3px);
     background:#3b82f6;
 }
+
 .social:hover{
     background:#2563eb;
 }
+
+.icon {
+    position: absolute;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+}
+
 </style>
 </head>
 
@@ -78,23 +90,25 @@ p{
 <div class="card">
 <div class="buttons">
 <a class="btn" style="background-color: #000000;" href="https://send.monobank.ua/5ev4LSrjLJ">
-monobank
+ <img class="icon" src="img/mono.png" alt="">  
+ <span>monobank</span>
 </a>
+
 <a class="btn" style="background-color: red;" href="https://mobile-app.pumb.ua/1EIaM">
-ПУМБ
+    <img class="icon" src="img/pumb2.png" alt="">
+<span>ПУМБ</span>
 </a>
+
 <a class="btn" style="background-color: green;" href="https://www.privat24.ua/send/421bz">
-Приват24
+    <img class="icon" src="img/privat3.png" alt="">
+<span>Приват24</span>
 </a>
+
 <a class="btn" style="background-color: rgb(0, 203, 0);" href="contact.vcf">
-abank24
+    <img class="icon" src="img/abank3.png" alt="">
+<span>abank24</span>
 </a>
 </div>
-
-<footer>
-
-</footer>
-
 </div>
 
 </body>
