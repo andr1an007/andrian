@@ -1,115 +1,146 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Inter,sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Inter, sans-serif;
+        }
 
-body{
-    background:linear-gradient(135deg,#09090b,#18181b,#27272a);
-    color:white;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:25px;
-}
+        body {
+            background: url(img/background.svg);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
 
-.card{
-    width:100%;
-    max-width:420px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:28px;
-    padding:35px;
-    text-align:center;
-    box-shadow:0 25px 60px rgba(0,0,0,.4);
-}
+        .card {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 28px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .4);
+        }
 
-p{
-    margin:20px 0;
-    color:#d4d4d8;
-    line-height:1.6;
-}
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            margin-bottom: 20px;
+        }
 
-.buttons{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    margin-top:25px;
-}
+        h1 {
+            font-size: 32px;
+        }
 
-.btn{
-    text-decoration:none;
-    color:white;
-    background:#000000;
-    padding:15px;
-    border-radius:14px;
-    font-weight:600;
-    transition:.25s;
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: center;
-}
+        p {
+            margin: 20px 0;
+            color: #d4d4d8;
+            line-height: 1.6;
+        }
 
-.btn:hover{
-    transform:translateY(-3px);
-    background:#3b82f6;
-}
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 25px;
+        }
 
-.social:hover{
-    background:#2563eb;
-}
+        .btn {
+            text-decoration: none;
+            color: white;
+            background: #000000;
+            padding: 15px;
+            border-radius: 14px;
+            font-weight: 600;
+            transition: .25s;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+        }
 
-.icon {
-    position: absolute;
-    left: 15px;
-    width: 35px;
-    height: 35px;
-}
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #3b82f6;
+        }
 
-</style>
+        .icon {
+            position: absolute;
+            left: 15px;
+            width: 35px;
+            height: 35px;
+        }
+
+        footer {
+            margin-top: 25px;
+            color: #71717a;
+            font-size: 13px;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="card">
-<div class="buttons">
-<a class="btn" style="background-color: #000000;" href="https://send.monobank.ua/5ev4LSrjLJ">
- <img class="icon" src="img/mono.png" alt="">  
- <span>monobank</span>
-</a>
+    <div class="card">
+        <img class="avatar" src="img/adya2.jpg" alt="Фото">
 
-<a class="btn" style="background-color: red;" href="https://mobile-app.pumb.ua/1EIaM">
-    <img class="icon" src="img/pumb2.png" alt="">
-<span>ПУМБ</span>
-</a>
+        <h1>Андріан Коноварт</h1>
 
-<a class="btn" style="background-color: green;" href="https://www.privat24.ua/send/421bz">
-    <img class="icon" src="img/privat3.png" alt="">
-<span>Приват24</span>
-</a>
+        <p>
+             Дякую❤️
+        </p>
 
-<a class="btn" style="background-color: rgb(0, 203, 0);" href="contact.vcf">
-    <img class="icon" src="img/abank3.png" alt="">
-<span>abank24</span>
-</a>
-</div>
-</div>
+
+        <div class="buttons">
+            <a class="btn" style="background-color: #000000;" href="https://send.monobank.ua/5ev4LSrjLJ">
+                <img class="icon" src="img/mono.png" alt="">
+                <span>monobank</span>
+            </a>
+
+            <a class="btn" style="background-color: red;" href="https://mobile-app.pumb.ua/1EIaM">
+                <img class="icon" src="img/pumb2.png" alt="">
+                <span>ПУМБ</span>
+            </a>
+
+            <a class="btn" style="background-color: green;" href="https://www.privat24.ua/send/421bz">
+                <img class="icon" src="img/privat3.png" alt="">
+                <span>Приват24</span>
+            </a>
+
+            <a class="btn" style="background-color: rgb(0, 203, 0);" href="contact.vcf">
+                <img class="icon" src="img/abank3.png" alt="">
+                <span>abank24</span>
+            </a>
+        </div>
+
+        <footer>
+            © 2026 adya
+        </footer>
+    </div>
+
+
 
 </body>
+
 </html>
