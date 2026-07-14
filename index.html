@@ -20,8 +20,8 @@
         }
 
 
-
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             width: 100%;
@@ -29,8 +29,8 @@
         }
 
         body {
-    background:
-        radial-gradient(circle at top, #1a1a2e 0%, #000 70%);
+            background:
+                radial-gradient(circle at top, #1a1a2e 0%, #000 70%);
             color: white;
             min-height: 100dvh;
             display: flex;
@@ -41,32 +41,38 @@
         }
 
         .card {
-            width: 100%;
+            width: min(92vw, 420px);
             max-width: 420px;
-            background: rgba(255, 255, 255, .08);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, .1);
-            border-radius: 28px;
-            padding: 35px;
+            border-radius: 30px;
+            padding: 28px 20px;
             text-align: center;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, .4);
+            position: relative;
+
+            background:
+                linear-gradient(160deg,
+                    rgba(255, 255, 255, .12),
+                    rgba(255, 255, 255, .05));
+
+            backdrop-filter: blur(35px) saturate(180%);
+            -webkit-backdrop-filter: blur(35px) saturate(180%);
+
+            border: 1px solid rgba(255, 255, 255, .15);
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, .35),
+                inset 0 1px rgba(255, 255, 255, .18);
+
+            overflow: hidden;
         }
 
-        .avatar {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #ffffff;
-            margin-bottom: 20px;
-        }
 
-        h1 {
-            font-size: 32px;
+        .h2 {
+            margin-bottom: 12px;
         }
 
         p {
             margin: 20px 0;
+            margin-bottom: 30px;
             color: #d4d4d8;
             line-height: 1.6;
         }
@@ -74,40 +80,93 @@
         .buttons {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 16px;
             margin-top: 25px;
         }
+
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background:
+                radial-gradient(circle at center,
+                    rgba(255, 255, 255, .18),
+                    transparent 70%);
+            opacity: 0;
+            transition: .35s;
+        }
+
+        .btn:active::before {
+            opacity: 1;
+        }
+
 
         .btn {
             text-decoration: none;
             color: white;
-            background: #000000;
-            padding: 15px;
-            border-radius: 14px;
+            background: rgba(255, 255, 255, .06);
+            padding: 0 18px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 22px;
+            backdrop-filter: blur(20px);
             font-weight: 600;
-            transition: .25s;
             display: flex;
             align-items: center;
             position: relative;
             justify-content: center;
+            height: 68px;
+            font-size: 22px;
+            font-weight: 600;
+            transition:
+                transform .18s cubic-bezier(.2, .8, .2, 1),
+                box-shadow .25s,
+                background .25s;
+        }
+
+
+        .btn:active {
+            transform: scale(.965);
+            background: rgba(255, 255, 255, .14);
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            background: #3b82f6;
+            transform: translateY(-3px) scale(1.02);
+            background: rgba(255, 255, 255, .12);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, .08);
         }
 
         .icon {
             position: absolute;
             left: 15px;
-            width: 35px;
-            height: 35px;
+            width: 42px;
+            height: 42px;
         }
 
-        footer {
-            margin-top: 25px;
-            color: #71717a;
-            font-size: 13px;
+        .card {
+            animation:
+                cardIn .8s cubic-bezier(.22, 1, .36, 1);
+        }
+
+        @keyframes cardIn {
+
+            0% {
+
+                opacity: 0;
+
+                transform:
+                    translateY(80px) scale(.92);
+
+            }
+
+            100% {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0) scale(1);
+            }
         }
     </style>
 </head>
@@ -115,41 +174,49 @@
 <body>
 
     <div class="card">
-        <img class="avatar" src="img/adya2.JPG" alt="Фото">
+        <h2>Дякую за вашу підтримку ❤️</h2>
 
-        <h1>Андріан Коноварт</h1>
-
-        <p>
-            Дякую❤️
-        </p>
-
+        <p>Якщо вам сподобався сервіс —
+            залишити чайові можна нижче.</p>
 
         <div class="buttons">
-            <a class="btn" style="background-color: #000000;" href="https://send.monobank.ua/5ev4LSrjLJ">
+            <a class="btn" href="https://send.monobank.ua/5ev4LSrjLJ">
                 <img class="icon" src="img/mono.png" alt="">
                 <span>monobank</span>
             </a>
 
-            <a class="btn" style="background-color: red;" href="https://mobile-app.pumb.ua/1EIaM">
+            <a class="btn" href="https://mobile-app.pumb.ua/1EIaM">
                 <img class="icon" src="img/pumb2.png" alt="">
                 <span>ПУМБ</span>
             </a>
 
-            <a class="btn" style="background-color: green;" href="https://www.privat24.ua/send/421bz">
+            <a class="btn" href="https://www.privat24.ua/send/421bz">
                 <img class="icon" src="img/privat3.png" alt="">
                 <span>Приват24</span>
             </a>
 
-            <a class="btn" style="background-color: rgb(0, 203, 0);" href="contact.vcf">
+            <a class="btn" href="contact.vcf">
                 <img class="icon" src="img/abank3.png" alt="">
                 <span>abank24</span>
             </a>
         </div>
-
-        <footer>
-            © 2026 adya
-        </footer>
     </div>
+
+    <script>
+        document.querySelectorAll(".tip-button").forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                if (navigator.vibrate) {
+                    navigator.vibrate(15);
+                }
+            });
+        });
+    </script>
+
+
+
+
 
 
 
